@@ -46,6 +46,7 @@ namespace BtcAddress {
         public string Denomination = "";
 
         public string ImageFilename = "note-yellow.png";
+//        public System.Drawing.Bitmap TheImage;
 
         public int NotesPerPage = 3;
 
@@ -172,9 +173,11 @@ namespace BtcAddress {
 
                 if (PrintMode == PrintModes.PsyBanknote) {
 
-                    if (BitcoinNote == null) {
-                        BitcoinNote = Image.FromFile(ImageFilename);
 
+                    if (BitcoinNote == null) {
+
+                        BitcoinNote = Image.FromFile(ImageFilename);
+//                        BitcoinNote = TheImage;
                     }
 
                     float desiredScale = 550F;

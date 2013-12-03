@@ -65,6 +65,9 @@ namespace BtcAddress.Forms {
                     case "purple":
                     case "greyscale":
                         printer.ImageFilename = "note-" + cboArtworkStyle.SelectedItem.ToString().ToLowerInvariant() + ".png";
+//                        string imageResourceName = "note-" + cboArtworkStyle.SelectedItem.ToString();
+//                        printer.TheImage = (System.Drawing.Bitmap)BtcAddress.Properties.Resources.ResourceManager.GetObject(imageResourceName, null);
+
                         break;
                 }
                 printer.Denomination = txtDenomination.Text;

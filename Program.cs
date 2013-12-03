@@ -39,6 +39,8 @@ namespace BtcAddress {
 
         public static BtcAddress.Forms.EscrowTools EscrowTools = null;
 
+//        public static BtcAddress.Forms.AddEncryptedKey AddEncryptedKey = null;
+
         public static void ShowAddressUtility() {
             AddressUtility = showForm<Form1>(AddressUtility);
         }
@@ -71,6 +73,10 @@ namespace BtcAddress {
             EscrowTools = showForm<BtcAddress.Forms.EscrowTools>(EscrowTools);
 
         }
+
+        //public static void ShowAddEncryptedKey() {
+        //    AddEncryptedKey = showForm<BtcAddress.Forms.AddEncryptedKey>(AddEncryptedKey);
+        //}
 
         private static T showForm<T>(T currentform) where T : Form, new() {
             if (currentform == null || currentform.Visible == false) {

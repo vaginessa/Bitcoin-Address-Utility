@@ -24,7 +24,7 @@
     </SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>x64</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -61,6 +61,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\AddEncryptedKey.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddEncryptedKey.Designer.cs">
+      <DependentUpon>AddEncryptedKey.cs</DependentUpon>
+    </Compile>
     <Compile Include="Barcode\Barcode128b.cs" />
     <Compile Include="Barcode\QR.cs" />
     <Compile Include="Model\Base58.cs" />
@@ -185,6 +191,9 @@
     <Compile Include="Reports\CoinInsert.cs">
       <SubType>Component</SubType>
     </Compile>
+    <EmbeddedResource Include="Forms\AddEncryptedKey.resx">
+      <DependentUpon>AddEncryptedKey.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AddressGen.resx">
       <DependentUpon>AddressGen.cs</DependentUpon>
     </EmbeddedResource>
@@ -250,6 +259,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="bitcoinlogo.ico" />
+    <Content Include="Forms\note-blue.png" />
+    <Content Include="Forms\note-green.png" />
+    <Content Include="Forms\note-Greyscale.png" />
+    <Content Include="Forms\note-purple.png" />
+    <Content Include="Forms\note-yellow.png" />
+    <None Include="note-yellow.png" />
+    <None Include="note-purple.png" />
+    <None Include="note-Greyscale.png" />
+    <None Include="note-green.png" />
+    <None Include="note-blue.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
